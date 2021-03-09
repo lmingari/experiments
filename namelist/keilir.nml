@@ -1,0 +1,52 @@
+#Namelist file for Keilir (2021)
+
+#General parameters: date
+volcano="Keilir"
+total_hours=48
+
+#GFS Data
+gfs_cycle=0
+lat_north=80
+lat_south=40
+lon_west=-60
+lon_east=50
+
+#WPS variables
+e_we=700
+e_sn=700
+dx=5000
+dy=5000
+ref_lat=62
+ref_lon=-5
+truelat1=62.00
+truelat2=62.00
+stand_lon=-5.00
+
+#WRF variables
+time_step=30
+e_vert=100
+ntasks=512
+
+#FALL3D parameters (fixed)
+lat_min=55
+lat_max=75
+lon_min=-30
+lon_max=20
+dlat=0.1
+dlon=0.1
+nlev=73
+zmax=18000
+NX=8
+NY=8
+NZ=1
+NENS=21
+
+#FALL3D parameters (variable)
+col_height=2000
+run_start=9
+run_end=24
+source_start=9
+source_end=10
+lon_vent=-22.1717
+lat_vent=63.9425
+z_vent=378

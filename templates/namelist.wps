@@ -1,0 +1,37 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '${start_date}','2006-08-16_12:00:00',
+ end_date   = '${end_date}','2006-08-16_12:00:00',
+ interval_seconds = 3600,
+ io_form_geogrid = 2,
+/
+
+&geogrid
+ parent_id         =   1,   1,
+ parent_grid_ratio =   1,   3,
+ i_parent_start    =   1,  31,
+ j_parent_start    =   1,  17,
+ e_we              =  ${e_we}, 112,
+ e_sn              =  ${e_sn},  97,
+ geog_data_res = 'default','default',
+ dx = ${dx},
+ dy = ${dy},
+ map_proj = 'lambert',
+ ref_lat   = ${ref_lat},
+ ref_lon   = ${ref_lon},
+ truelat1  = ${truelat1},
+ truelat2  = ${truelat2},
+ stand_lon = ${stand_lon},
+ geog_data_path = '/gpfs/apps/MN4/WRF/SRC/WRF_MN4/DATA/WPS_GEOG/'
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'GFS',
+/
+
+&metgrid
+ fg_name = 'GFS'
+ io_form_metgrid = 2, 
+/
