@@ -40,6 +40,7 @@ sed -e "s|\${start_year}|${start_year}|"         \
     -e "s|\${METFORM}|${METFORM}|"               \
     -e "s|\${METFILE}|${METFILE}|"               \
     -e "s|\${col_height}|${col_height}|"         \
+    -e "s|\${col_height0}|${col_height%% *}|"    \
     -e "s|\${run_start}|${run_start}|"           \
     -e "s|\${run_end}|${run_end}|"               \
     -e "s|\${source_start}|${source_start}|"     \

@@ -26,11 +26,6 @@ begin
 ;---Open WRF/FALL3D files
   a                      = addfile(path+fname,"r")
 
-  wks_type               = "pdf"
-  wks_type@wkPaperWidthF = 9
-  wks_type@wkPaperHeightF= 8
-  wks                    = gsn_open_wks(wks_type,outpath+varname)
-
   times  = a->time
   ntimes = dimsizes(times)
   format = "%d-%c-%Y %H:%M"
@@ -39,6 +34,11 @@ begin
   ik = 3
   fl = a->fl(ik)
   
+  wks_type               = "pdf"
+  wks_type@wkPaperWidthF = 9
+  wks_type@wkPaperHeightF= 8
+  wks                    = gsn_open_wks(wks_type,outpath+varname+fl)
+
 ;---Set common resources for all plots
   res                    = True
   res@gsnFrame           = False

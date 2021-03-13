@@ -174,7 +174,7 @@
      IF_WEIBULL     FI_SCALE = 1.0        W_SHAPE = 1.0
      IF_BIWEIBULL   FI_SCALE = 1.0  1.0   W_SHAPE = 1.0  1.0  MIXING_FACTOR = 0.5
      IF_CUSTOM      FILE = my_file.tgsd
-     IF_ESTIMATE    VISCOSITY_(PAS) = 1d6  HEIGHT_ABOVE_VENT_(M) = ${col_height}
+     IF_ESTIMATE    VISCOSITY_(PAS) = 1d6  HEIGHT_ABOVE_VENT_(M) = ${col_height0}
    !
  -------------
  CS137_TGSD
