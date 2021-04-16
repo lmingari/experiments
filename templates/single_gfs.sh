@@ -14,7 +14,7 @@ fi
 #BASEURL="http://www.ftp.ncep.noaa.gov/data/nccf/com/gfs/prod/gfs.${DATE_URL}/${CYCLE}"
 #BASEURL="ftp://ftpprd.ncep.noaa.gov/pub/data/nccf/com/gfs/prod/gfs.${DATE_URL}/${CYCLE}"
 BASEURL="https://nomads.ncep.noaa.gov/cgi-bin/filter_gfs_0p25.pl"
-URLPAR="&all_lev=on&all_var=on&subregion=&leftlon=${lon_west}&rightlon=${lon_east}&toplat=${lat_north}&bottomlat=${lat_south}&dir=%2Fgfs.${DATE_URL}%2F${CYCLE}"
+URLPAR="&all_lev=on&all_var=on&subregion=&leftlon=${lon_west}&rightlon=${lon_east}&toplat=${lat_north}&bottomlat=${lat_south}&dir=%2Fgfs.${DATE_URL}%2F${CYCLE}%2Fatmos"
 
 OUTFILE="gfs.t${CYCLE}z.pgrb2.0p25.f${HOUR}"
 CHECKFILE=${BASEPATH}/GFS/${HOUR}.check
