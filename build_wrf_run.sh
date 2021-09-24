@@ -69,7 +69,7 @@ sed -e "s/\${total_hours}/${total_hours}/" \
     -e "s/\${time_step}/${time_step}/"     \
     -e "s/\${e_we}/${e_we}/"               \
     -e "s/\${e_sn}/${e_sn}/"               \
-    -e "s/\${e_vert}/${e_vert}/"           \
+    -e "s/\${e_vert}/${e_vert}/g"          \
     -e "s/\${dx}/${dx}/"                   \
     -e "s/\${dy}/${dy}/"                   \
     ${EXPDIR}/templates/namelist.input > ${RUNDIR}/namelist.base.input

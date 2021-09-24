@@ -92,7 +92,7 @@ sed -e "s|\${col_height}|${col_height}|"              \
     -e "s|\${z_vent}|${z_vent}|"                      \
     ${EXPDIR}/templates/set_parameters.sh > ${PRJDIR}/set_parameters.sh
 
-for subdir in col-mass deposit fl200 fl350 fl450 cloud-top
+for subdir in col-mass deposit fl200 fl350 fl450 cloud-top so2-col-mass so2-fl50
 do
     OUTPATH=$RUNDIR/POST/deterministic/$subdir
     mkdir -p $OUTPATH

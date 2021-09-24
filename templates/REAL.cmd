@@ -29,17 +29,20 @@ end_month=$(date -u --date="${DATE} 00:00 Z +${total_hours} hour" +'%m')
 end_day=$(date -u --date="${DATE} 00:00 Z +${total_hours} hour" +'%d')
 end_hour=$(date -u --date="${DATE} 00:00 Z +${total_hours} hour" +'%H')
 
-sed -e "s/\${start_year}/${start_year}/"   \
-    -e "s/\${start_month}/${start_month}/" \
-    -e "s/\${start_day}/${start_day}/"     \
-    -e "s/\${end_year}/${end_year}/"       \
-    -e "s/\${end_month}/${end_month}/"     \
-    -e "s/\${end_day}/${end_day}/"         \
-    -e "s/\${end_hour}/${end_hour}/"       \
+sed -e "s/\${start_year}/${start_year}/g"   \
+    -e "s/\${start_month}/${start_month}/g" \
+    -e "s/\${start_day}/${start_day}/g"     \
+    -e "s/\${end_year}/${end_year}/g"       \
+    -e "s/\${end_month}/${end_month}/g"     \
+    -e "s/\${end_day}/${end_day}/g"         \
+    -e "s/\${end_hour}/${end_hour}/g"       \
     ${RUNDIR}/namelist.base.input > ${RUNDIR}/namelist.input
     
 rm ${RUNDIR}/met_em.d01.*
 ln -s ../WPS/met_em.d01.* .
+
+rm ${RUNDIR}/met_em.d02.*
+ln -s ../WPS/met_em.d02.* .
 
 mpirun ${RUNDIR}/real.exe 
 

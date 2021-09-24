@@ -22,8 +22,8 @@ DATE=$(date +"%Y-%m-%d")
 start_date=$(date -u --date="${DATE} 00:00 Z" +'%Y-%m-%d_%H:%M:%S')
 end_date=$(date -u --date="${DATE} 00:00 Z +${total_hours} hour" +'%Y-%m-%d_%H:%M:%S')
 
-sed -e "s/\${start_date}/${start_date}/" \
-    -e "s/\${end_date}/${end_date}/"     \
+sed -e "s/\${start_date}/${start_date}/g" \
+    -e "s/\${end_date}/${end_date}/g"     \
     ${RUNDIR}/namelist.base.wps > ${RUNDIR}/namelist.wps
 
 ${RUNDIR}/link_grib.csh ${PRJDIR}/GFS/gfs.*
