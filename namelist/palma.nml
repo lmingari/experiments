@@ -1,0 +1,52 @@
+#Namelist file for La Palma (2021)
+
+#General parameters: date
+volcano="La Palma"
+total_hours=48
+
+#GFS Data
+gfs_cycle=0
+lat_north=45
+lat_south=10
+lon_west=-50
+lon_east=5
+
+#WPS variables
+e_we=580
+e_sn=580
+dx=6000
+dy=6000
+ref_lat=28.5
+ref_lon=-18
+truelat1=28.50
+truelat2=28.50
+stand_lon=-18.00
+
+#WRF variables
+time_step=36
+e_vert=100
+ntasks=512
+
+#FALL3D parameters (fixed)
+lat_min=27.5
+lat_max=29.0
+lon_min=-18.6
+lon_max=-15.0
+dlat=0.01
+dlon=0.01
+nlev=40
+zmax=10000
+NX=8
+NY=8
+NZ=1
+NENS=20
+
+#FALL3D parameters (variable)
+col_height=2000
+run_start=9
+run_end=24
+source_start=9
+source_end=10
+lon_vent=-17.85
+lat_vent=28.62
+z_vent=500

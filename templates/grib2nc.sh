@@ -25,7 +25,7 @@
 # DATE: initial date in format YYYYMMDD
 
 ########## Edit header ########## 
-WGRIBEXE="/gpfs/projects/bsc21/bsc21908/libraries-nd3/SRC/grib2/wgrib2"
+WGRIBEXE="/gpfs/projects/bsc21/bsc21908/libraries-nd3/SRC/grib2/wgrib2/wgrib2"
 GRIBDIR="${PRJDIR}/GFS"
 OUTPUTFILE="${GRIBDIR}/${PRJNAME}.grib2nc.nc"
 TABLEFILE="${GRIBDIR}/table.levels"
